@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
    //    })
    // }
 
-   const swiper = new Swiper('.swiper', {
+
+   const top5Swiper = new Swiper('.top-5__swiper', {
       modules: [Pagination],
       speed: 1000,
       slidesPerView: "auto",
@@ -26,5 +27,60 @@ document.addEventListener('DOMContentLoaded', () => {
          el: ".swiper-pagination",
          dynamicBullets: true,
       }
-    });
+   });
+
+   const guestbookSwiper = new Swiper('.guestbook__swiper', {
+      modules: [Pagination],
+      speed: 800,
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+      loop: true,
+
+      pagination: {
+         el: ".swiper-pagination",
+         dynamicBullets: true,
+      },
+   });
+
+   const blog = new Swiper('.blog__swiper', {
+      speed: 800,
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+
+   });
+
+
+
+
+   
+
+   changeSwiperDirection ();
+
+   window.addEventListener('resize', () => {
+      changeSwiperDirection();
+   })
+
+   function changeSwiperDirection () {
+      if (window.innerWidth < 1150) {
+         guestbookSwiper.changeDirection('horizontal', true);
+
+         const categories = new Swiper('.categories__body', {
+            modules: [Pagination],
+            speed: 1000,
+            slidesPerView: "auto",
+            spaceBetween: 8,
+      
+            pagination: {
+               el: ".swiper-pagination",
+               dynamicBullets: true,
+            }
+         });
+         
+      } else {
+         guestbookSwiper.changeDirection('vertical');
+         categories.destroy(true, true);
+         
+      }
+   }
+   
 });
