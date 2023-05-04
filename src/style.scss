@@ -36,54 +36,41 @@ body {
 }
 
 // ======= COMMON STYLES ========
-   .title {
-      font-size: 32px;
-      line-height: 1.25;
-      font-weight: 500;
-      color: #101828;
+.title {
+   font-size: 32px;
+   line-height: 1.25;
+   font-weight: 500;
+   color: #101828;
 
-      &--text-violet {
-         color: #6941C6;
-      }
-   }
-
-   .show-more-link {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      font-size: 20px;
-      line-height: 1.4;
-      font-weight: 500;
+   &--text-violet {
       color: #6941C6;
-      padding: 16px 20px 16px 16px;
-      background-color: #F4EBFF;
-      transition: 0.3s;
+   }
+}
 
-      &__svg::after {
-         content: '';
-         position: absolute;
-         width: 100%;
-         height: 100%;
-         top: 0;
-         left: 0;
-      }
-      
-      & svg {
-         position: relative;
-         z-index: 1;
-      }
+.show-more-link {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+   font-size: 20px;
+   line-height: 1.4;
+   font-weight: 500;
+   color: #6941C6;
+   padding: 16px 20px 16px 16px;
+   background-color: #F4EBFF;
+   transition: 0.3s;
 
-      & svg path:hover {
+   &:hover {
+      background-color: #6941C6;
+      color: #FFFFFF;
+
+      svg path {
          fill: #FFFFFF;
       }
-
-      &:hover {
-         background-color: #6941C6;
-         color: #FFFFFF;
-      }
    }
+}
+
 
 // ========HEADER=============
 
@@ -222,8 +209,12 @@ body {
 // =======HERO===========
 
 .hero {
-   padding-top: 16px 0 8px;
+   padding: 16px 0 0px;
    background-color: #9E77ED;
+   background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODMxIiBoZWlnaHQ9Ijk4NSIgdmlld0JveD0iMCAwIDgzMSA5ODUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHg9IjMwOC4wNDkiIHk9Ijk4NC43MzIiIHdpZHRoPSI4NjUuMDMiIGhlaWdodD0iNTQwLjY0NCIgdHJhbnNmb3JtPSJyb3RhdGUoLTEwNSAzMDguMDQ5IDk4NC43MzIpIiBmaWxsPSIjQjY5MkY2Ii8+CjxyZWN0IHg9IjQxMi42MDIiIHk9IjkyNS44OTkiIHdpZHRoPSI3ODUuMTcyIiBoZWlnaHQ9IjQ5MC43MzIiIHRyYW5zZm9ybT0icm90YXRlKC0xMjEuNzAxIDQxMi42MDIgOTI1Ljg5OSkiIGZpbGw9IiM3RjU2RDkiLz4KPC9zdmc+Cg==");
+   background-repeat: no-repeat;
+   background-position: bottom -200px right -140px;
+   background-size: 417px;
 
    &__content {
       position: relative;
@@ -537,6 +528,11 @@ body {
       padding: 16px;
       background-color: #fff;
       min-height: 144px;
+      &:hover{
+         .categories__text:after {
+            transform: translateX(10px);
+         }
+      }
    }
 
    &__text {
@@ -544,8 +540,14 @@ body {
       align-items: flex-start;
       justify-content: space-between;
 
-      & img {
+      &:after {
          margin-top: 5px;
+         transition: 0.3s;
+         content: '';
+         display: block;
+         width: 20px;
+         height: 20px;
+         background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE0Ljg2NzcgOC44MzMzM0w4LjYwOTY2IDIuNTc1MzNMMTAuMjU5MyAwLjkyNTY1OUwxOS4zMzM3IDkuOTk5OTlMMTAuMjU5MyAxOS4wNzQzTDguNjA5NjYgMTcuNDI0N0wxNC44Njc3IDExLjE2NjdIMC42NjY5OTJWOC44MzMzM0gxNC44Njc3WiIgZmlsbD0iIzY5NDFDNiIvPgo8L3N2Zz4K");
       }
    }
 

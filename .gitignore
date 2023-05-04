@@ -1,1 +1,5 @@
 /node_modules
+/.idea/vcs.xml
+/.idea/papersbattle.iml
+/.idea/modules.xml
+/.idea/.gitignore
