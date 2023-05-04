@@ -1,8 +1,13 @@
 import './style.scss';
 
 import Swiper, { Pagination } from 'swiper';
+import lozad from 'lozad'
 
 document.addEventListener('DOMContentLoaded', () => {
+
+
+   const observer = lozad();
+   observer.observe();
 
    // burger menu
    // const menuBtn = document.querySelector('.nav__burger');
@@ -49,10 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
    });
 
-
-
-
-   
+   let categories = false;
 
    changeSwiperDirection ();
 
@@ -60,11 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
       changeSwiperDirection();
    })
 
+
    function changeSwiperDirection () {
       if (window.innerWidth < 1150) {
-         guestbookSwiper.changeDirection('horizontal', true);
+         guestbookSwiper.changeDirection('horizontal');
 
-         const categories = new Swiper('.categories__body', {
+         categories = new Swiper('.categories__body', {
             modules: [Pagination],
             speed: 1000,
             slidesPerView: "auto",
@@ -77,9 +80,14 @@ document.addEventListener('DOMContentLoaded', () => {
          });
          
       } else {
+
          guestbookSwiper.changeDirection('vertical');
-         categories.destroy(true, true);
-         
+
+         if (categories) {
+            categories.destroy(true, true);
+            categories = false;
+         }
+
       }
    }
    
