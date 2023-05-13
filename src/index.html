@@ -8,13 +8,14 @@
 </head>
 
 <body>
+
    <div class="wrapper">
       <header class="header">
          <div class="header__container">
             <img src="images/header/logo.svg" alt="logo" class="header__logo">
             <nav class="header__nav nav">
                <ul class="nav__menu menu">
-                  <li class="menu__item">
+                  <li class="menu__item menu__item--has-child" data-popup="#top-services">
                      Top writing services
                      <svg class="menu__arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -23,7 +24,7 @@
                            fill="white" />
                      </svg>
                   </li>
-                  <li class="menu__item">
+                  <li class="menu__item menu__item--has-child" data-popup="#brands-reviews">
                      Brands reviews
                      <svg class="menu__arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -58,6 +59,10 @@
                   <span></span>
                </div>
             </nav>
+         </div>
+         <div class="popup-menu">
+            <div class="popup-menu__item" id="top-services">top-services</div>
+            <div class="popup-menu__item" id="brands-reviews">brands-reviews</div>
          </div>
       </header>
       <main class="page">
@@ -135,7 +140,7 @@
                               <img
                                  src="data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAgA0JaQAA3AA/vknQAA="
                                  data-src="images/top-5/papersowl-prev.png" alt="papersowl.com main page preview"
-                                 class="card__img lozad">
+                                 class="card__img lozad" width="344" height="164">
                            </div>
                            <div class="card__running-line">
                               <div class="card__running">

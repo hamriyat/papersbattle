@@ -66,17 +66,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
    function categoriesSwiper () {
       if (window.innerWidth < 650) {
-         categories = new Swiper('.categories__body', {
-            modules: [Pagination],
-            speed: 1000,
-            slidesPerView: 1,
-            spaceBetween: 8,
-      
-            pagination: {
-               el: ".swiper-pagination",
-               dynamicBullets: true,
-            },
-         });
+
+         if (!categories) {
+            categories = new Swiper('.categories__body', {
+               modules: [Pagination],
+               speed: 1000,
+               slidesPerView: 1,
+               spaceBetween: 8,
+
+               pagination: {
+                  el: ".swiper-pagination",
+                  dynamicBullets: true,
+               },
+            });
+         }
+
          
       } else {
          if (categories) {
@@ -97,34 +101,67 @@ document.addEventListener('DOMContentLoaded', () => {
    
 
    // navigation scroll to
-const navLink = document.querySelector('.hero__link');
+   const navLink = document.querySelector('.hero__link');
 
-if (navLink) {
-   navLink.addEventListener("click", (e) => {
-      let gotoBlock = document.querySelector('#categories');
-      if (gotoBlock) {
-         const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector('header').offsetHeight;
-         window.scrollTo({
-            top: gotoBlockValue,
-            behavior: "smooth"
-         });
-      }
-      e.preventDefault();
-   });
+   if (navLink) {
+      navLink.addEventListener("click", (e) => {
+         let gotoBlock = document.querySelector('#categories');
+         if (gotoBlock) {
+            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector('header').offsetHeight;
+            window.scrollTo({
+               top: gotoBlockValue,
+               behavior: "smooth"
+            });
+         }
+         e.preventDefault();
+      });
 
-}
-
-// white header on scroll
-
-document.addEventListener("scroll", (event) => {
+   }
 
    let header = document.querySelector('.header');
-   if (window.scrollY > 0) {
-      header.classList.add('header-white-js');
-   } else {
-      header.classList.remove('header-white-js');
-   } 
-});
+   let menuItem = document.querySelectorAll('.menu__item--has-child');
+
+   menuItem.forEach(function (e){
+      e.addEventListener("mouseover", openSubMenu);
+   });
+
+   header.addEventListener("mouseleave", openSubMenu);
+
+   function openSubMenu(){
+      let popupMenu = document.querySelector('.popup-menu');
+      let popupMenuItems = document.querySelectorAll('.popup-menu__item');
+
+      let id = this.dataset.popup;
+
+      if (this.dataset.popup) {
+         header.classList.add('header-white-js');
+         let menuItemChild = document.querySelector(id);
+         popupMenuItems.forEach(function (e) {
+            e.classList.remove('open-js');
+         })
+         popupMenu.classList.add('open-js')
+         menuItemChild.classList.add('open-js')
+      } else {
+         popupMenu.classList.remove('open-js')
+         header.classList.remove('header-white-js');
+         popupMenuItems.forEach(function (e) {
+            e.classList.remove('open-js');
+         })
+
+      }
+
+   }
+
+   // white header on scroll
+
+   document.addEventListener("scroll", (event) => {
+
+      if (window.scrollY > 0) {
+         header.classList.add('header-white-js');
+      } else {
+         header.classList.remove('header-white-js');
+      }
+   });
       
    
 

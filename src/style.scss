@@ -270,12 +270,39 @@ body {
       font-size: 16px;
       line-height: 1.5;
       font-weight: 500;
+      .header-white-js & {
+         color: #000;
+      }
    }
 
    &__link {
    }
 }
+.popup-menu {
+   position: absolute;
+   z-index: -9999;
+   visibility: hidden;
+   opacity: 0;
+   transition: 0.3s;
+   width: 100%;
+   background: firebrick;
+   top: 95px;
 
+   &.open-js {
+      z-index: 9999;
+      visibility: visible;
+      opacity: 1;
+   }
+   &__item {
+      display: none;
+      font-size: 35px;
+      color: #fff;
+      &.open-js {
+         display: block;
+      }
+   }
+
+}
 // =======HERO===========
 
 .hero {
