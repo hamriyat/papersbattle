@@ -20,12 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
          // question
 
-         if(header.contains(document.querySelector('.header-white-js'))) {
-            return
-         } else {
+         if(!header.contains(document.querySelector('.header-scroll-js'))) {
             header.classList.toggle('header-white-js');
          }
-         
+
          
          if(navSearch) {
             if(menuBtn.contains(document.querySelector('.nav__burger--active-js'))) {
@@ -58,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
       slidesPerView: 'auto',
       spaceBetween: 8,
       loop: true,
+      centeredSlides: true,
 
       pagination: {
          el: ".swiper-pagination",
@@ -144,7 +143,9 @@ document.addEventListener('DOMContentLoaded', () => {
    let menuItem = document.querySelectorAll('.menu__item--has-child');
 
    menuItem.forEach(function (e){
+
       e.addEventListener("mouseover", openSubMenu);
+
    });
 
    header.addEventListener("mouseleave", openSubMenu);
@@ -177,11 +178,12 @@ document.addEventListener('DOMContentLoaded', () => {
    // white header on scroll
 
    document.addEventListener("scroll", (event) => {
-
       if (window.scrollY > 0) {
          header.classList.add('header-white-js');
+         header.classList.add('header-scroll-js');
       } else {
          header.classList.remove('header-white-js');
+         header.classList.remove('header-scroll-js');
       }
    });
 

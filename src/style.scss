@@ -461,11 +461,11 @@ body {
 
    &__section {
       transition: 0.3s;
-      display: none;
+      visibility: hidden;
       left: 100%;
 
       &.open-js {
-         display: block;
+         visibility: visible;
          left: 0;
       }
    }
