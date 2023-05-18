@@ -10,15 +10,35 @@ document.addEventListener('DOMContentLoaded', () => {
    // burger menu
    const menuBtn = document.querySelector('.nav__burger');
    const menuBody  = document.querySelector('.menu');
+   const navSearch = document.querySelector('.nav__search')
 
    if (menuBtn && menuBody) {
       menuBtn.addEventListener('click', function (e) {
          document.body.classList.toggle('scroll-lock-js');
          menuBtn.classList.toggle('nav__burger--active-js');
          menuBody.classList.toggle('menu--active-js');
+
+         // question
+
+         if(header.contains(document.querySelector('.header-white-js'))) {
+            return
+         } else {
+            header.classList.toggle('header-white-js');
+         }
+         
+         
+         if(navSearch) {
+            if(menuBtn.contains(document.querySelector('.nav__burger--active-js'))) {
+               navSearch.style.display = "none";
+            } else {
+               navSearch.style.display = "block";
+            }
+         }
       })
    }
 
+   
+// sliders
 
    const top5Swiper = new Swiper('.top-5__swiper', {
       modules: [Pagination],
@@ -101,13 +121,15 @@ document.addEventListener('DOMContentLoaded', () => {
    
 
    // navigation scroll to
+
    const navLink = document.querySelector('.hero__link');
 
    if (navLink) {
       navLink.addEventListener("click", (e) => {
          let gotoBlock = document.querySelector('#categories');
          if (gotoBlock) {
-            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector('header').offsetHeight;
+            const gotoBlockValue =
+            gotoBlock.getBoundingClientRect().top + scrollY - (20 + document.querySelector('header').offsetHeight);
             window.scrollTo({
                top: gotoBlockValue,
                behavior: "smooth"
@@ -129,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
    function openSubMenu(){
       let popupMenu = document.querySelector('.popup-menu');
-      let popupMenuItems = document.querySelectorAll('.popup-menu__item');
+      let popupMenuItems = document.querySelectorAll('.popup-menu__section');
 
       let id = this.dataset.popup;
 
@@ -162,8 +184,20 @@ document.addEventListener('DOMContentLoaded', () => {
          header.classList.remove('header-white-js');
       }
    });
-      
-   
+
+
+   const topServicesBtn = document.querySelector('.top-services__btn');
+   const topServicesMenu = document.querySelector('.top-services');
+   const popUpMenu = document.querySelector('.popup-menu')
+
+   topServicesBtn.addEventListener("click", (e) => {
+      // openMenu.style.left = 100 + '%';
+      topServicesMenu.classList.toggle('open-js');
+      popUpMenu.classList.toggle('open-js');
+
+   })
+
+   // ламається анімація при повторному кліку
 
 });
 
