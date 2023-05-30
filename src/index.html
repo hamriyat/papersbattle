@@ -97,7 +97,7 @@
                            fill="white" />
                      </svg>
                   </li>
-                  <li class="menu__item menu__item--has-child" data-popup="#brands-reviews">
+                  <li class="menu__item menu__item--has-child" data-popup="#brand-reviews">
                      Brands reviews
                      <svg class="menu__arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -107,21 +107,25 @@
                      </svg>
                   </li>
                   <li class="menu__item">
-                     <a href="" class="menu__link">Blog</a>
+                     <a href="#" class="menu__link">Blog</a>
                   </li>
                   <li class="menu__item">
-                     <a href="" class="menu__link">About us</a>
+                     <a href="#" class="menu__link">About us</a>
                   </li>
                   <li class="menu__item menu__item--violet">
-                     <a href="" class="menu__link">Check best services</a>
+                     <a href="#" class="menu__link">Check best services</a>
                   </li>
                </ul>
                <div class="nav__search">
-                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path
-                        d="M16.031 14.617L20.314 18.899L18.899 20.314L14.617 16.031C13.0237 17.3082 11.042 18.0029 9 18C4.032 18 0 13.968 0 9C0 4.032 4.032 0 9 0C13.968 0 18 4.032 18 9C18.0029 11.042 17.3082 13.0237 16.031 14.617ZM14.025 13.875C15.2941 12.5699 16.0029 10.8204 16 9C16 5.132 12.867 2 9 2C5.132 2 2 5.132 2 9C2 12.867 5.132 16 9 16C10.8204 16.0029 12.5699 15.2941 13.875 14.025L14.025 13.875Z"
-                        fill="white" />
-                  </svg>
+                  <button class="nav__btn-open">
+                     <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M16.031 14.617L20.314 18.899L18.899 20.314L14.617 16.031C13.0237 17.3082 11.042 18.0029 9 18C4.032 18 0 13.968 0 9C0 4.032 4.032 0 9 0C13.968 0 18 4.032 18 9C18.0029 11.042 17.3082 13.0237 16.031 14.617ZM14.025 13.875C15.2941 12.5699 16.0029 10.8204 16 9C16 5.132 12.867 2 9 2C5.132 2 2 5.132 2 9C2 12.867 5.132 16 9 16C10.8204 16.0029 12.5699 15.2941 13.875 14.025L14.025 13.875Z"
+                           fill="white" />
+                     </svg>
+                  </button>
+                  <input type="text" placeholder="Search..." class="nav__input">
+                  <button class="nav__btn-close"></button>
                </div>
                <a href="" class="nav__link">
                   Check best services
@@ -139,52 +143,197 @@
          <div class="popup-menu">
             <div class="popup-menu__section top-services" id="top-services">
                <div class="top-services__section">
-                  <button class="top-services__btn" type="button">Top writing services</button>
-                  <div class="top-services__content">
-                     <div class="top-services__item">
-                        <a href="#" class="top-services__link">
-                           <span class="top-services__span">top 10</span>
-                           <p class="top-services__title">
-                              Best <span class="top-services__title--violet">Thesis</span> Writing Services
-                           </p>
-                        </a>
+                  <div class="top-services__container">
+                     <button class="top-services__btn back-btn" type="button">Top writing services</button>
+                     <div class="top-services__left">
+                        <div class="top-services__item">
+                           <a href="#" class="top-services__link">
+                              <span class="top-services__span">top 10</span>
+                              <p class="top-services__title">
+                                 Best <span class="top-services__title--violet">Thesis</span> Writing Services
+                              </p>
+                           </a>
+                        </div>
+                        <div class="top-services__item">
+                           <a href="#" class="top-services__link">
+                              <span class="top-services__span">top 10</span>
+                              <p class="top-services__title">
+                                 Best <span class="top-services__title--violet">Dissertation</span> Writing Services
+                              </p>
+                           </a>
+                        </div>
+                        <div class="top-services__item">
+                           <a href="#" class="top-services__link">
+                              <span class="top-services__span">top 10</span>
+                              <p class="top-services__title">
+                                 Best <span class="top-services__title--violet">Assignment</span> Writing Services
+                              </p>
+                           </a>
+                        </div>
+                        <div class="top-services__item">
+                           <a href="#" class="top-services__link">
+                              <span class="top-services__span">top 10</span>
+                              <p class="top-services__title">
+                                 Best <span class="top-services__title--violet">Term paper</span> Writing Services
+                              </p>
+                           </a>
+                        </div>
+                        <div class="top-services__item">
+                           <a href="#" class="top-services__link">
+                              <span class="top-services__span">best</span>
+                              <p class="top-services__title">
+                                 <span class="top-services__title--violet">Coursework</span> Writing Services
+                              </p>
+                           </a>
+                        </div>
+                        <div class="top-services__item">
+                           <a href="#" class="top-services__link">
+                              <span class="top-services__span">top 10</span>
+                              <p class="top-services__title">
+                                 Best <span class="top-services__title--violet">Term paper</span> Writing Services
+                              </p>
+                           </a>
+                        </div>
+                        <div class="top-services__item">
+                           <a href="#" class="top-services__link">
+                              <span class="top-services__span">top 10</span>
+                              <p class="top-services__title">
+                                 Best <span class="top-services__title--violet">Term paper</span> Writing Services
+                              </p>
+                           </a>
+                        </div>
+                        <div class="top-services__item">
+                           <a href="#" class="top-services__link">
+                              <span class="top-services__span">top 10</span>
+                              <p class="top-services__title">
+                                 Best <span class="top-services__title--violet">Term paper</span> Writing Services
+                              </p>
+                           </a>
+                        </div>
                      </div>
-                     <div class="top-services__item">
-                        <a href="#" class="top-services__link">
-                           <span class="top-services__span">top 10</span>
-                           <p class="top-services__title">
-                              Best <span class="top-services__title--violet">Dissertation</span> Writing Services
-                           </p>
-                        </a>
-                     </div>
-                     <div class="top-services__item">
-                        <a href="#" class="top-services__link">
-                           <span class="top-services__span">top 10</span>
-                           <p class="top-services__title">
-                              Best <span class="top-services__title--violet">Assignment</span> Writing Services
-                           </p>
-                        </a>
-                     </div>
-                     <div class="top-services__item">
-                        <a href="#" class="top-services__link">
-                           <span class="top-services__span">top 10</span>
-                           <p class="top-services__title">
-                              Best <span class="top-services__title--violet">Term paper</span> Writing Services
-                           </p>
-                        </a>
-                     </div>
-                     <div class="top-services__item">
-                        <a href="#" class="top-services__link">
-                           <span class="top-services__span">best</span>
-                           <p class="top-services__title">
-                              <span class="top-services__title--violet">Coursework</span> Writing Services
-                           </p>
-                        </a>
+                     <div class="top-services__right among-all">
+                        <div class="among-all__content">
+                           <h2 class="among-all__title">🔥 Top 5 among all </h2>
+                           <ol class="among-all__list list-among-all">
+                              <li class="list-among-all__item">
+                                 <div class="list-among-all__website">
+                                    <span class="list-among-all__value">PapersOwl.com</span>
+                                    <a href="#" class="list-among-all__link">Visit site</a>
+                                 </div>
+                                 <img src="images/popup-menu/5.svg" alt="5 stars out of 5">
+                              </li>
+                              <li class="list-among-all__item">
+                                 <div class="list-among-all__website">
+                                    <span class="list-among-all__value">Edusson.com</span>
+                                    <a href="#" class="list-among-all__link">Visit site</a>
+                                 </div>
+                                 <img src="images/popup-menu/4.5.svg" alt="5 stars out of 5">
+                              </li>
+                              <li class="list-among-all__item">
+                                 <div class="list-among-all__website">
+                                    <span class="list-among-all__value">EduBirdie</span>
+                                    <a href="#" class="list-among-all__link">Visit site</a>
+                                 </div>
+                                 <img src="images/popup-menu/4.5.svg" alt="5 stars out of 5">
+                              </li>
+                              <li class="list-among-all__item">
+                                 <div class="list-among-all__website">
+                                    <span class="list-among-all__value">Paperell.com</span>
+                                    <a href="#" class="list-among-all__link">Visit site</a>
+                                 </div>
+                                 <img src="images/popup-menu/4.svg" alt="5 stars out of 5">
+                              </li>
+                              <li class="list-among-all__item">
+                                 <div class="list-among-all__website">
+                                    <span class="list-among-all__value">StudyMoose</span>
+                                    <a href="#" class="list-among-all__link">Visit site</a>
+                                 </div>
+                                 <img src="images/popup-menu/4.svg" alt="5 stars out of 5">
+                              </li>
+                           </ol>
+                        </div>
                      </div>
                   </div>
                </div>
             </div>
-            <div class="popup-menu__section" id="brands-reviews">brands-reviews</div>
+            <div class="popup-menu__section brand-reviews" id="brand-reviews">
+               <div class="brand-reviews__section">
+                  <div class="brand-reviews__container">
+                     <div class="brand-reviews__left">
+                        <button class="brand-reviews__btn back-btn" type="button">Brand reviews</button>
+                        <ul class="brand-reviews__list">
+                           <li class="brand-reviews__item">
+                              <a href="#" class="brand-reviews__link">
+                                 <img src="images/popup-menu/papersowl-logo.svg" alt="papersowl logo">
+                              </a>
+                           </li>
+                           <li class="brand-reviews__item">
+                              <a href="#" class="brand-reviews__link">
+                                 <img src="images/popup-menu/edusson-logo.svg" alt="edusson logo">
+                              </a>
+                           </li>
+                           <li class="brand-reviews__item">
+                              <a href="#" class="brand-reviews__link">
+                                 <img src="images/popup-menu/paperell-logo.svg" alt="paperell logo">
+                              </a>
+                           </li>
+                           <li class="brand-reviews__item">
+                              <a href="#" class="brand-reviews__link">
+                                 <img src="images/popup-menu/edubirdie-logo.svg" alt="edubirdie logo">
+                              </a>
+                           </li>
+                           <li class="brand-reviews__item">
+                              <a href="#" class="brand-reviews__link">
+                                 <img src="images/popup-menu/studymoose-logo.svg" alt="studymoose logo">
+                              </a>
+                           </li>
+                           <li class="brand-reviews__item">
+                              <a href="#" class="brand-reviews__link">
+                                 <img src="images/popup-menu/vikings-logo.svg" alt="essay.vikings logo">
+                              </a>
+                           </li>
+                           <li class="brand-reviews__item">
+                              <a href="#" class="brand-reviews__link">
+                                 <img src="images/popup-menu/paperial-logo.svg" alt="paperial logo">
+                              </a>
+                           </li>
+                        </ul>
+                        <a href="#" class="brand-reviews__primary-link">All brand reviews</a>
+                     </div>
+                     <div class="brand-reviews__right">
+                        <article class="brand-reviews__review-top review-top">
+                           <div class="review-top__top">
+                              <span>👍 Users choice</span>
+                              <a href="#" class="review-top__link-top">Read full review</a>
+                           </div>
+                           <div class="review-top__middle">
+                              <img src="images/header/review-papersowl.jpg" alt="papersowl.com main page"
+                                 class="review-top__img">
+                              <div class="review-top__running-line running-line">
+                                 <div class="running-line__running">
+                                    <span class="running-line__running-text">Best of the best</span>
+                                    <span class="running-line__running-text running-line__running-text--opacity">Best of
+                                       the best</span>
+                                    <span class="running-line__running-text">Best of the best</span>
+                                    <span class="running-line__running-text running-line__running-text--opacity">Best of
+                                       the best</span>
+                                    <span class="running-line__running-text">Best of the best</span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="review-top__bottom">
+                              <a href="#" class="review-top__link">PapersOwl.com</a>
+                           </div>
+                        </article>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="popup-menu__section search" id="search">
+               <div class="search__results">
+                  <span class="search__start">Start searching...</span>
+               </div>
+            </div>
          </div>
       </header>
       <main class="page">
@@ -262,13 +411,15 @@
                               <img src="images/top-5/papersowl-prev.png" alt="papersowl.com main page preview"
                                  class="card__img">
                            </div>
-                           <div class="card__running-line">
-                              <div class="card__running">
-                                 <span class="card__running-text">Best of the best</span>
-                                 <span class="card__running-text card__running-text--opacity">Best of the best</span>
-                                 <span class="card__running-text">Best of the best</span>
-                                 <span class="card__running-text card__running-text--opacity">Best of the best</span>
-                                 <span class="card__running-text">Best of the best</span>
+                           <div class="card__running-line running-line">
+                              <div class="running-line__running">
+                                 <span class="running-line__running-text">Best of the best</span>
+                                 <span class="running-line__running-text running-line__running-text--opacity">Best of
+                                    the best</span>
+                                 <span class="running-line__running-text">Best of the best</span>
+                                 <span class="running-line__running-text running-line__running-text--opacity">Best of
+                                    the best</span>
+                                 <span class="running-line__running-text">Best of the best</span>
                               </div>
                            </div>
                            <div class="card__info">
@@ -309,13 +460,15 @@
                               <img src="images/top-5/papersowl-prev.png" alt="papersowl.com main page preview"
                                  class="card__img">
                            </div>
-                           <div class="card__running-line">
-                              <div class="card__running">
-                                 <span class="card__running-text">Best of the best</span>
-                                 <span class="card__running-text card__running-text--opacity">Best of the best</span>
-                                 <span class="card__running-text">Best of the best</span>
-                                 <span class="card__running-text card__running-text--opacity">Best of the best</span>
-                                 <span class="card__running-text">Best of the best</span>
+                           <div class="card__running-line running-line">
+                              <div class="running-line__running">
+                                 <span class="running-line__running-text">Best of the best</span>
+                                 <span class="running-line__running-text running-line__running-text--opacity">Best of
+                                    the best</span>
+                                 <span class="running-line__running-text">Best of the best</span>
+                                 <span class="running-line__running-text running-line__running-text--opacity">Best of
+                                    the best</span>
+                                 <span class="running-line__running-text">Best of the best</span>
                               </div>
                            </div>
                            <div class="card__info">
@@ -356,13 +509,15 @@
                               <img src="images/top-5/papersowl-prev.png" alt="papersowl.com main page preview"
                                  class="card__img">
                            </div>
-                           <div class="card__running-line">
-                              <div class="card__running">
-                                 <span class="card__running-text">Best of the best</span>
-                                 <span class="card__running-text card__running-text--opacity">Best of the best</span>
-                                 <span class="card__running-text">Best of the best</span>
-                                 <span class="card__running-text card__running-text--opacity">Best of the best</span>
-                                 <span class="card__running-text">Best of the best</span>
+                           <div class="card__running-line running-line">
+                              <div class="running-line__running">
+                                 <span class="running-line__running-text">Best of the best</span>
+                                 <span class="running-line__running-text running-line__running-text--opacity">Best of
+                                    the best</span>
+                                 <span class="running-line__running-text">Best of the best</span>
+                                 <span class="running-line__running-text running-line__running-text--opacity">Best of
+                                    the best</span>
+                                 <span class="running-line__running-text">Best of the best</span>
                               </div>
                            </div>
                            <div class="card__info">
@@ -403,13 +558,15 @@
                               <img src="images/top-5/papersowl-prev.png" alt="papersowl.com main page preview"
                                  class="card__img">
                            </div>
-                           <div class="card__running-line">
-                              <div class="card__running">
-                                 <span class="card__running-text">Best of the best</span>
-                                 <span class="card__running-text card__running-text--opacity">Best of the best</span>
-                                 <span class="card__running-text">Best of the best</span>
-                                 <span class="card__running-text card__running-text--opacity">Best of the best</span>
-                                 <span class="card__running-text">Best of the best</span>
+                           <div class="card__running-line running-line">
+                              <div class="running-line__running">
+                                 <span class="running-line__running-text">Best of the best</span>
+                                 <span class="running-line__running-text running-line__running-text--opacity">Best of
+                                    the best</span>
+                                 <span class="running-line__running-text">Best of the best</span>
+                                 <span class="running-line__running-text running-line__running-text--opacity">Best of
+                                    the best</span>
+                                 <span class="running-line__running-text">Best of the best</span>
                               </div>
                            </div>
                            <div class="card__info">
@@ -450,13 +607,15 @@
                               <img src="images/top-5/papersowl-prev.png" alt="papersowl.com main page preview"
                                  class="card__img">
                            </div>
-                           <div class="card__running-line">
-                              <div class="card__running">
-                                 <span class="card__running-text">Best of the best</span>
-                                 <span class="card__running-text card__running-text--opacity">Best of the best</span>
-                                 <span class="card__running-text">Best of the best</span>
-                                 <span class="card__running-text card__running-text--opacity">Best of the best</span>
-                                 <span class="card__running-text">Best of the best</span>
+                           <div class="card__running-line running-line">
+                              <div class="running-line__running">
+                                 <span class="running-line__running-text">Best of the best</span>
+                                 <span class="running-line__running-text running-line__running-text--opacity">Best of
+                                    the best</span>
+                                 <span class="running-line__running-text">Best of the best</span>
+                                 <span class="running-line__running-text running-line__running-text--opacity">Best of
+                                    the best</span>
+                                 <span class="running-line__running-text">Best of the best</span>
                               </div>
                            </div>
                            <div class="card__info">
@@ -988,9 +1147,9 @@
                <p class="subscribe__text">
                   About tips & tricks on how to write the best papers for educational, business and everyday life needs
                </p>
-               <form action="submit" class="subscribe__form">
+               <form class="subscribe__form">
                   <input type="email" name="email" id="email" placeholder="Your email" class="subscribe__email">
-                  <button type="submit" class="subscribe__btn">Subscribe
+                  <button type="button" class="subscribe__btn">Subscribe
                      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                            d="M11.6669 17.7006L22.3909 6.97546L24.0417 8.62513L11.6669 21L4.24219 13.5753L5.89185 11.9256L11.6669 17.7006Z"
@@ -998,6 +1157,16 @@
                      </svg>
                   </button>
                </form>
+               <div class="subscribe__overlay"></div>
+               <div class="subscribe__modal modal">
+                  <div class="modal__content">
+                     <h3 class="modal__title">Thanks for subscription!</h3>
+                     <p class="modal__text">
+                        Your email monicaSunners@gemail.com has been subscribed to our mailing list
+                     </p>
+                     <button class="modal__close-btn">Ok, cool</button>
+                  </div>
+               </div>
             </div>
          </section>
       </main>
