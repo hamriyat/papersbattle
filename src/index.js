@@ -17,6 +17,31 @@ document.addEventListener('DOMContentLoaded', () => {
    const logo = document.querySelector('.header__logo');
 
 
+
+   // Пример реализации
+   // function menuOpenClose() {
+   //    if(window.innerWidth < 992) {
+   //       header.classList.toggle('menu-open-mob-js');
+   //    } else {
+   //       header.classList.toggle('menu-open-desc-js');
+   //    }
+   //    header.classList.toggle('header-white-js');
+   // }
+   // if(navSearch) {
+   //    navSearchOpen.addEventListener('click', menuOpenClose )
+   //    navSearchClose.addEventListener('click', menuOpenClose )
+   // }
+   //
+
+   navInput.addEventListener('keyup',(e) => {
+
+      if(navInput.value.length > 1) {
+         console.log('x');
+      } else {
+         console.log('0');
+      }
+   });
+
    if(navSearch) {
       navSearchOpen.addEventListener('click', () => {
          if(window.innerWidth < 992) {
@@ -209,7 +234,9 @@ document.addEventListener('DOMContentLoaded', () => {
          menuItemChild.classList.add('open-js')
       } else {
          popupMenu.classList.remove('open-js')
-         header.classList.remove('header-white-js');
+         if (!header.classList.contains('header-scroll-js')) {
+            header.classList.remove('header-white-js');
+         }
          popupMenuItems.forEach(function (e) {
             e.classList.remove('open-js');
          })
@@ -247,6 +274,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+document.addEventListener("click", (e) => {
+
+});
 
 // modal popup 
 
@@ -254,13 +284,28 @@ const submitEmail = document.querySelector('.subscribe__btn');
 const closeModal = document.querySelector('.modal__close-btn');
 const modalOverlay = document.querySelector('.subscribe__overlay');
 const modal = document.querySelector('.modal');
+const submitForm = document.querySelector('.subscribe__form');
+const modalText = document.querySelector('.modal__text span');
+const subscribeEmail = document.querySelector('.subscribe__email');
+
+
 
 if(submitEmail) {
-   submitEmail.addEventListener('click', () => {
+
+   submitForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      modalText.innerHTML = subscribeEmail.value;
       modal.classList.add('modal--open-js');
       modalOverlay.classList.add('subscribe__overlay--open-js');
       document.body.classList.add('scroll-lock-js');
    })
+
+
+   // submitEmail.addEventListener('click', () => {
+   //    modal.classList.add('modal--open-js');
+   //    modalOverlay.classList.add('subscribe__overlay--open-js');
+   //    document.body.classList.add('scroll-lock-js');
+   // })
    closeModal.addEventListener('click', () => {
       modal.classList.remove('modal--open-js');
       modalOverlay.classList.remove('subscribe__overlay--open-js');
